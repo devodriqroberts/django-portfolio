@@ -6,6 +6,7 @@ class About(models.Model):
     short_description = models.TextField()
     description = models.TextField()
     image = models.ImageField(upload_to="about")
+    cv = models.URLField( max_length=100)
 
     class Meta:
         verbose_name = "About me"
@@ -30,16 +31,18 @@ class Skill(models.Model):
 # Recent Work Model
 class RecentWork(models.Model):
 
-    LINK_TYPE_CHOICES = (
-        ('Code','Code'),
-        ('Notebook','Notebook')
+    STATUS_CHOICES = (
+        ('enabled', 'enabled'),
+        ('disabled', 'disabled'),
     )
 
     title = models.CharField(max_length=100, verbose_name="Work title")
     image = models.ImageField(upload_to="works")
     rank = models.PositiveIntegerField()
-    url = models.URLField(max_length=200)
-    file_type = models.CharField(max_length=10, null=False, choices=LINK_TYPE_CHOICES)
+    code_url = models.URLField(max_length=200, null=True, blank=True)
+    notebook_url = models.URLField(max_length=200, null=True, blank=True)
+    code_status = models.CharField(max_length=10, null=False, choices=STATUS_CHOICES)
+    notebook_status = models.CharField(max_length=10, null=False, choices=STATUS_CHOICES)
     photo_credit = models.CharField(max_length=100)
 
     ordering = [rank]
@@ -53,6 +56,16 @@ class Client(models.Model):
     name = models.CharField(max_length=100, verbose_name="Client name")
     description = models.TextField(verbose_name="Client say")
     image = models.ImageField(upload_to="clients", default="default.png")
+
+    def __str__(self):
+        return self.name
+
+
+# MOOC Model
+class MOOC(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Course name")
+    issuer = models.CharField(max_length=100, verbose_name="issuer")
+    certificate_link = models.URLField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return self.name

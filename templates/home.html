@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <div class="welcome-text">
                         <div class="name-area wow fadeInDown" data-wow-delay="0.2s">Hello. Welcome to my portfolio.</div>
-                        <h1 class="wow fadeInDown" data-wow-delay="0.4s">Create . Innovative . Learn</h1>
+                        <h1 class="wow fadeInDown" data-wow-delay="0.4s"><span class="create">Create</span> . <span class="innovate">Innovative</span> . <span class="learn">Learn</span></h1>
                         <div class="social-media row">
                             <a href="https://www.linkedin.com/in/devodriq-roberts-15a65289/" target='blank'>
                                 <div class='social-icon'>
@@ -33,7 +33,7 @@
                         
                         <a href="#about" class="my-btn-1 welcome-text-btn wow fadeInDown" data-wow-delay="0.6s">View Site</a>
                         <a href="#contact" class="my-btn-2 welcome-text-btn wow fadeInDown" data-wow-delay="0.8s">Contact Me</a>
-                        <small class='photo-credit'>Photo by Safar Safarov on Unsplash</small>
+                        
                     </div>
                 </div>
             </div>
@@ -52,14 +52,14 @@
                         <h4>{{ about.short_description }}</h4>
                         <p>{{ about.description }}</p>
                         <div class='about-links'>
-                        <a href="images/about/cv.jpg" download>Download CV&nbsp;<i class="fa fa-download"></i></a>
-                        <a href="#">More About Myself&nbsp;</a>
+                        <a href="{{ about.cv }}" target='blank' download='D.Roberts_cv'>Download CV&nbsp;<i class="fa fa-download"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5 visible-md visible-lg wow fadeInDown" data-wow-delay="0.6s">
-                    <div class="profile">
+                    <div class="profile text-center">
                         <img src="{{ about.image.url }}" alt="Profile image" class="img-responsive">
+                        {% comment %} <small class='photo-credit'>Photo by Safar Safarov on Unsplash</small> {% endcomment %}
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center">
-                        <h2>Skills</h2>
+                        <h2>Technical Skills</h2>
                     </div>
                 </div>
             </div>
@@ -103,15 +103,47 @@
             </div>
             <div class="row">
                 {% for work in works %}
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding project">
                         <div class="gallery-items">
                             <a class="view img" href="{{ work.image.url }}">
                                 <img src="{{ work.image.url }}" title= "{{work.photo_credit}}"alt="work image">
                             </a>
 
                             <div class="gallery-text">
-                                <a href="{{ work.url }}" target='blank' title="View {{work.file_type}}"><h2>{{ work.title }}</h2></a>
+                                <h2>{{ work.title }}</h2>
                             </div>
+                            
+                        </div>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="file type">
+                            <a role="button" href="{{ work.code_url }}" target='blank' class="btn btn-secondary {{work.code_status}}">Code</a>
+                            <a role="button"  href="{{ work.notebook_url }}" target='blank' class="btn btn-secondary {{work.notebook_status}}">Notebook</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {#    MOOCs Section #}
+    <div id="mooc" class="section-padding moocs-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center">
+                        <h2>Continued Education</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for mooc in moocs %}
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="single-mooc wow fadeInDown" data-wow-delay="0.2s">
+                            <a class='mooc-wrapper' title='View Certificate' target='blank' href="{{ mooc.certificate_link }}">
+                                <i class="icon icon-notebook"></i>
+                                <h2>{{ mooc.name }}</h2>
+                             </a>
+                            <p>{{ mooc.issuer }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -175,7 +207,7 @@
                                     <div class="form-group wow fadeInUp" data-wow-delay="0.6s">
                                         <textarea id="form_message" name="message" class="form-control"
                                                   placeholder="Your Message *" rows="4" required="required"
-                                                  data-error="Leave a message for me"></textarea>
+                                                  data-error="Please leave a message."></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
