@@ -650,13 +650,6 @@ h6 {
 /*---portfolio ends---*/
 
 /*--- 6. Skills area css starts ---*/
-/* .skills-area {
-    background: #333333;
-    
-}
-.skills-area .section-header h2{
-    color: var(--white-color);
-} */
 
 .single-mooc{
     margin-bottom: 30px;
@@ -751,25 +744,39 @@ h6 {
 
 /*--- 9. Invitation area css starts ---*/
 
-.invitation-area{
+.journey-area{
     background: #333333;
     color: var(--white-color);
 }
 
-.single-invite h2 {
+.journey-row {
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
+
+.journey-text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.journey-text h2 {
+    margin: 20px 0;
+    text-align: center;
     font-size: 27px;
     line-height: 37px;
     margin-bottom: 20px;
     padding-top: 10px;
     font-weight: 600;
     color: var(--white-color);
+    text-decoration: var(--hover-color-red) underline;
 }
-.single-invite p {
-    width: 70%;
+.journey-text p {
+    width: 100%;
     margin: auto;
     color: var(--white-color);
 }
-.single-invite a {
+.journey-text a {
     display: inline-block;
     color: var(--white-color);
     padding: 10px 20px;
@@ -810,6 +817,34 @@ h6 {
     padding: 15px 20px;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.contact-method a {
+    display: block;
+}
+
+.contact-method .contact-method-link h4 {
+    display: inline-block;
+    margin-left: 10px;
+}
+.contact-method .contact-method-link i {
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    height: 10px;
+    padding-top: 10px;
+}
+
+.contact-method-link:hover i {
+    color: var(--hover-color-red);
+}
+
+.contact-method-link:hover h4 {
+    text-decoration: underline var(--bg-color);
+}
+
+.contact-content .contact-method {
+    margin: 30px 20px;
 }
 
 /*------------- Contact area ends -------------*/
