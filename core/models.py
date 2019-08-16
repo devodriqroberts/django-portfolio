@@ -7,6 +7,9 @@ class About(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to="about")
     cv = models.URLField( max_length=100)
+    past = models.TextField()
+    current = models.TextField()
+    future = models.TextField()
 
     class Meta:
         verbose_name = "About me"
@@ -66,6 +69,14 @@ class MOOC(models.Model):
     name = models.CharField(max_length=100, verbose_name="Course name")
     issuer = models.CharField(max_length=100, verbose_name="issuer")
     certificate_link = models.URLField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+# Contact method models
+class ContactMethod(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Contact method")
+    url = models.URLField(max_length=200)
 
     def __str__(self):
         return self.name
