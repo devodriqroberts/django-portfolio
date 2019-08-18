@@ -183,6 +183,47 @@ h6 {
     transform: rotate(45deg);
 }
 
+.journey-header {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.journey-header  h2 {
+    font-size: 27px;
+    line-height: 37px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-weight: 600;
+    /* color: var(--white-color); */
+}
+
+.journey-header  h2::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 80px;
+    left: 50%;
+    top: 60px;
+    text-align: center;
+    z-index: -1;
+    background: var(--bg-color);
+    margin-left: -40px;
+}
+
+.journey-header  h2::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 50%;
+    top: 53px;
+    text-align: center;
+    z-index: -1;
+    background: var(--bg-color);
+    margin-left: -7px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 /*--- 1. Default CSS Ends ---*/
 
 /*-------------- 2. Preloader css starts ---------------*/
@@ -758,6 +799,7 @@ h6 {
 .journey-text {
     display: inline-block;
     vertical-align: top;
+    color: var(--white-color);
 }
 
 .journey-text h2 {
@@ -768,25 +810,13 @@ h6 {
     margin-bottom: 20px;
     padding-top: 10px;
     font-weight: 600;
-    color: var(--white-color);
     text-decoration: var(--hover-color-red) underline;
 }
+
 .journey-text p {
     width: 100%;
     margin: auto;
-    color: var(--white-color);
-}
-.journey-text a {
-    display: inline-block;
-    color: var(--white-color);
-    padding: 10px 20px;
-    text-transform: uppercase;
-    background: var(--bg-color);
-    margin-top: 20px;
-    border-radius: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 14px;
+    /* color: var(--white-color); */
 }
 
 /*--- invitation area ends ---*/
