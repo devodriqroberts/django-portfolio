@@ -115,8 +115,8 @@
                             
                         </div>
                         <div class="btn-group btn-group-sm" role="group" aria-label="file type">
-                            <a role="button" href="{{ work.code_url }}" target='blank' class="btn btn-secondary {{work.code_status}}">Code</a>
-                            <a role="button"  href="{{ work.notebook_url }}" target='blank' class="btn btn-secondary {{work.notebook_status}}">Notebook</a>
+                            <a role="button" href="{{ work.code_url }}" target='blank' class="btn btn-secondary {{work.code_status}}">View Code</a>
+                            <a role="button"  href="{{ work.notebook_url }}" target='blank' class="btn btn-secondary {{work.notebook_status}}">View Notebook</a>
                         </div>
                     </div>
                 {% endfor %}
@@ -153,9 +153,16 @@
 
     {#    Contact section #}
 
-    <div class="journey-area section-padding">
+    <div id='journey' class="journey-area section-padding">
         <div class="container">
-            <h2>My journey...</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="journey-header text-center">
+                        <h2>My journey...</h2>
+                    </div>
+                </div>
+            </div>
+            
             <div class="row journey-row">
                 <div class="col-md-4 col-sm-6">
                     <div class="journey-text wow fadeInDown" data-wow-delay="0.2s">
