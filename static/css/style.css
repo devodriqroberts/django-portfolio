@@ -183,47 +183,6 @@ h6 {
     transform: rotate(45deg);
 }
 
-.journey-header {
-    margin-bottom: 100px;
-    text-align: center;
-}
-
-.journey-header  h2 {
-    font-size: 27px;
-    line-height: 37px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    font-weight: 600;
-    /* color: var(--white-color); */
-}
-
-.journey-header  h2::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 80px;
-    left: 50%;
-    top: 60px;
-    text-align: center;
-    z-index: -1;
-    background: var(--bg-color);
-    margin-left: -40px;
-}
-
-.journey-header  h2::after {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 50%;
-    top: 53px;
-    text-align: center;
-    z-index: -1;
-    background: var(--bg-color);
-    margin-left: -7px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
 /*--- 1. Default CSS Ends ---*/
 
 /*-------------- 2. Preloader css starts ---------------*/
