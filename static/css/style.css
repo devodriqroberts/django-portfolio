@@ -21,6 +21,7 @@ Table of content
     --hover-color-grey: rgba(150, 150, 150, 0.5);
     --white-color: #fff;
     --hover-color-red: #FF7E60;
+    --dark-grey-color: #333333;
 }
 
 /* Variables End */
@@ -118,12 +119,16 @@ h6 {
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 10px;
-    color: #333333;
+    color: var(--dark-grey-color);
     text-transform: uppercase;
 }
 
 .section-padding {
     padding: 90px 0;
+}
+
+.btm-border {
+    border-bottom: var(--hover-color-grey) solid 8px;
 }
 
 .bg-overlay {
@@ -138,7 +143,7 @@ h6 {
 
 .bg-overlay.black {
     position: absolute;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .section-header {
@@ -147,7 +152,7 @@ h6 {
 }
 
 .journey-header h2 {
-    color: var(--white-color);
+    color: var(--dark-grey-color);
 }
 
 .section-header h2 {
@@ -156,7 +161,7 @@ h6 {
     margin-bottom: 20px;
     padding-top: 10px;
     font-weight: 600;
-    color: #333333;
+    color: var(--dark-grey-color);
 }
 
 .section-header h2::before {
@@ -337,7 +342,7 @@ h6 {
 
 .banner-area {
     height: 100vh;
-    background: #222 url("../media/banner/bg-home.jpg") no-repeat fixed 100% 100% / cover;
+    background: #222 url("../../media/banner/bg-home.jpg") no-repeat fixed 100% 100% / cover;
     padding: 0;
     position: relative;
     /* max-height: 600px; */
@@ -453,7 +458,7 @@ h6 {
     margin-bottom: 20px;
     padding-top: 10px;
     font-weight: 600;
-    color: #333333;
+    color: var(--dark-grey-color);
     /* text-align: center; */
 }
 
@@ -491,7 +496,7 @@ h6 {
 
 /*--- 6. Skills area css starts ---*/
 /* .skills-area {
-    background: #333333;
+    background: var(--dark-grey-color);
     
 }
 .skills-area .section-header h2{
@@ -715,7 +720,7 @@ h6 {
 #testimonial-carousel .item p {
     width: 70%;
     margin: 20px auto;
-    color: #333333;
+    color: var(--dark-grey-color);
 }
 
 #testimonial-carousel .item i {
@@ -749,8 +754,8 @@ h6 {
 /*--- 9. Invitation area css starts ---*/
 
 .journey-area{
-    background: #333333;
-    color: var(--white-color);
+    background: var(--white-color);
+    color: var(--dark-grey-color);
 }
 
 .journey-row {
@@ -762,7 +767,7 @@ h6 {
 .journey-text {
     display: inline-block;
     vertical-align: top;
-    color: var(--white-color);
+    color: var(--dark-grey-color);
 }
 
 .journey-text h2 {
@@ -773,14 +778,14 @@ h6 {
     margin-bottom: 20px;
     padding-top: 10px;
     font-weight: 600;
-    color: var(--white-color);
+    color: var(--dark-grey-color);
     text-decoration: var(--hover-color-red) underline;
 }
 
 .journey-text p {
     width: 100%;
     margin: auto;
-    color: var(--white-color);
+    color: var(--dark-grey-color);
 }
 
 /*--- invitation area ends ---*/
