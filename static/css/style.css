@@ -146,6 +146,10 @@ h6 {
     text-align: center;
 }
 
+.journey-header h2 {
+    color: var(--white-color);
+}
+
 .section-header h2 {
     font-size: 27px;
     line-height: 37px;
@@ -769,6 +773,7 @@ h6 {
     margin-bottom: 20px;
     padding-top: 10px;
     font-weight: 600;
+    color: var(--white-color);
     text-decoration: var(--hover-color-red) underline;
 }
 
