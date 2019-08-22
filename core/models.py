@@ -40,7 +40,7 @@ class RecentWork(models.Model):
     )
 
     title = models.CharField(max_length=100, verbose_name="Work title")
-    image = models.ImageField(upload_to="works")
+    image_url = models.URLField(max_length=200, null=True, blank=True)
     rank = models.PositiveIntegerField()
     code_url = models.URLField(max_length=200, null=True, blank=True)
     notebook_url = models.URLField(max_length=200, null=True, blank=True)
